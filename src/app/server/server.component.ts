@@ -8,14 +8,16 @@ import { Component } from '@angular/core';
 export class ServerComponent {
   serverStatus = "No server created";
   allowNewServer = false;
-  serverName = ""
+  serverName = "";
+  serverCreated = false;
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
     }, 2000)
   }
   updateServerStatus() {
-    this.serverStatus = "server was created with name = " + this.serverName;
+    this.serverCreated = true;
+    // this.serverStatus = "server was created with name = " + this.serverName;
   }
 
 
