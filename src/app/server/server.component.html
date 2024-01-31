@@ -6,7 +6,21 @@
             <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="updateServerStatus()">Add
                 Server</button>
             <!-- <p>{{serverStatus}}</p> -->
-            <p *ngIf="serverCreated">server was created with name {{serverName}}</p>
+            <!-- <p *ngIf="serverCreated ; else noServer">Server was created! With Name {{serverName}}</p>
+            <ng-template #noServer>
+                <p>No server created</p>
+            </ng-template> -->
+            @if(serverCreated){
+            <p>Server was added! Name is {{serverName}}</p>
+            }@else{
+            <p>No server added</p>
+            }
+            <p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online:serverStatus==='online'}">server with ID 10
+                is {{ getServerStatus() }}</p>
+            <p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online: serverStatus==='online'}">server with ID 10
+                is {{ getServerStatus()
+                }}</p>
+
         </div>
     </div>
 </div>
