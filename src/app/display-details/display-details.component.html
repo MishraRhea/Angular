@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <button class="btn btn-primary" (click)="showParagraph()" (click)="updateCount()">Display Details</button>
+            @if(btnClick.length%2!==0){
+            <p>{{paragraph}}</p>
+            }
+            <!-- @if(btnClick.length >= 5)
+            {
+            <p *ngFor="let btn of btnClick" [ngStyle]="{backgroundColor: showColor()} "
+                [ngClass]="{txtColor: btnClick.length>=5}">
+                {{btnClick}}
+            </p>}
+            @else{
+            <p *ngFor="let btn of btnClick">{{btnClick}}</p>
+            } -->
+            <p *ngFor="let btn of btnClick" [ngStyle]="{backgroundColor: showColor()} "
+                [ngClass]="{txtColor: btnClick.length>=5}">
+                {{btnClick}}</p>
+            <p *ngFor="let btn for btnClick">{{paragraph}}</p>
+        </div>
+    </div>
+</div>

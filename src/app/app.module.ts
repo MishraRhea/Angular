@@ -8,6 +8,7 @@ import { ServerComponent } from './server/server.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateUsernameComponent } from './update-username/update-username.component';
 import { ServersComponent } from './servers/servers.component';
+import { DisplayDetailsComponent } from './display-details/display-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ServersComponent } from './servers/servers.component';
     SuccessAlertComponent,
     ServerComponent,
     UpdateUsernameComponent,
-    ServersComponent
+    ServersComponent,
+    DisplayDetailsComponent
   ],
   imports: [
     BrowserModule,
