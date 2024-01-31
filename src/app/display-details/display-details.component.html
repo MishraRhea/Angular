@@ -1,10 +1,17 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <button class="btn btn-primary" (click)="showParagraph()" (click)="updateCount()">Display Details</button>
+            <!-- <button class="btn btn-primary" (click)="showParagraph()" (click)="updateCount()">Display Details</button>
             @if(btnClick.length%2!==0){
             <p>{{paragraph}}</p>
+            } -->
+            <button class="btn btn-primary" (click)="showParagraph()">Display Details</button>
+            <!-- @if(btnClick.length%2!==0){ -->
+            @if(displayPara){
+            <p>seceret password: tuna</p>
             }
+            <!-- <p *ngIF="displayPara">seceret password: tuna</p> -->
+            <!-- } -->
             <!-- @if(btnClick.length >= 5)
             {
             <p *ngFor="let btn of btnClick" [ngStyle]="{backgroundColor: showColor()} "
@@ -14,10 +21,9 @@
             @else{
             <p *ngFor="let btn of btnClick">{{btnClick}}</p>
             } -->
-            <p *ngFor="let btn of btnClick" [ngStyle]="{backgroundColor: showColor()} "
-                [ngClass]="{txtColor: btnClick.length>=5}">
-                {{btnClick}}</p>
-            <p *ngFor="let btn for btnClick">{{paragraph}}</p>
+            <p *ngFor="let btn of btnClick; index as i" [ngStyle]="{backgroundColor: btn>=5 ? 'blue':'transparent'} "
+                [ngClass]="{txtColor: btn>=5}">
+                {{btn}}</p>
         </div>
     </div>
 </div>

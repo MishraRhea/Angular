@@ -6,18 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './display-details.component.css'
 })
 export class DisplayDetailsComponent {
-  paragraph = "";
-  count = 0;
+  displayPara = false;
   btnClick = [];
   showParagraph() {
-    this.paragraph = "Secret Password = 'tuna'"
+    this.displayPara = !this.displayPara;
+    this.btnClick.push(this.btnClick.length + 1);
   }
-  updateCount() {
-    this.btnClick.push(++this.count);
-    console.log(this.btnClick);
-  }
-  showColor() {
-    return this.btnClick.length >= 5 ? 'blue' : 'white';
-  }
-
 }
