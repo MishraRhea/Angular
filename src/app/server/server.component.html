@@ -15,8 +15,7 @@
             }@else{
             <p>No server added</p>
             }
-            <app-servers></app-servers>
-            <app-servers></app-servers>
+            <app-servers *ngFor="let server of servers"></app-servers>
 
         </div>
     </div>

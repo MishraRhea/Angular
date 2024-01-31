@@ -10,7 +10,7 @@ export class ServerComponent {
   allowNewServer = false;
   serverName = "";
   serverCreated = false;
-  setColor = "";
+  servers = ['Test'];
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
@@ -19,6 +19,9 @@ export class ServerComponent {
   }
   updateServerStatus() {
     this.serverCreated = true;
+    this.servers.push(this.serverName);
+    console.log(this.servers);
+
     // this.serverStatus = "server was created with name = " + this.serverName;
   }
 
