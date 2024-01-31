@@ -21,8 +21,11 @@
             @else{
             <p *ngFor="let btn of btnClick">{{btnClick}}</p>
             } -->
-            <p *ngFor="let btn of btnClick; index as i" [ngStyle]="{backgroundColor: btn>=5 ? 'blue':'transparent'} "
+            <!-- <p *ngFor="let btn of btnClick; index as i" [ngStyle]="{backgroundColor: btn>=5 ? 'blue':'transparent'} "
                 [ngClass]="{txtColor: btn>=5}">
+                {{btn}}</p> -->
+            <p *ngFor="let btn of btnClick; index as i" [ngStyle]="{backgroundColor: i>=5 ? 'blue':'transparent'} "
+                [ngClass]="{txtColor: i>=5}">
                 {{btn}}</p>
         </div>
     </div>

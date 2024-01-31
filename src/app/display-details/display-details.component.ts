@@ -10,6 +10,8 @@ export class DisplayDetailsComponent {
   btnClick = [];
   showParagraph() {
     this.displayPara = !this.displayPara;
-    this.btnClick.push(this.btnClick.length + 1);
+    // this.btnClick.push(this.btnClick.length + 1);
+    this.btnClick.push(new Date());
+
   }
 }
