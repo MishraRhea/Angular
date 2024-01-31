@@ -15,11 +15,8 @@
             }@else{
             <p>No server added</p>
             }
-            <p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online:serverStatus==='online'}">server with ID 10
-                is {{ getServerStatus() }}</p>
-            <p [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{online: serverStatus==='online'}">server with ID 10
-                is {{ getServerStatus()
-                }}</p>
+            <app-servers></app-servers>
+            <app-servers></app-servers>
 
         </div>
     </div>
